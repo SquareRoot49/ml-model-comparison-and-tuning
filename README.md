@@ -36,3 +36,27 @@ And apply various feature selection techniques:
 | Lasso                  | 0.0315   |
 | Kernel Ridge (Poly)    | 0.0252   |
 | **Kernel Ridge (RBF)** | **0.0203** |
+
+
+## Visualizations
+
+### 1. Model Comparison (Test MSE)
+This chart compares the average test MSE for each model after tuning:
+
+![Model Comparison](images/model_comparison.png)
+
+### 2. Regularization Paths
+The plots below show how Lasso and Elastic Net shrink coefficients to zero as λ increases:
+
+- **Lasso Regression Coefficient Paths**  
+  ![Lasso Path](images/lasso_path.png)
+
+- **ElasticNet Paths with Different L1 Ratios**  
+  ![ElasticNet 0.33](images/elasticnet_path_033.png)  
+  ![ElasticNet 0.66](images/elasticnet_path_066.png)  
+  ![ElasticNet 1.0](images/elasticnet_path_100.png)
+
+### 3. Hyperparameter Tuning (RBF Kernel Ridge)
+Tuning α using train/val/test split:
+
+![MSE vs Alpha](images/mse_vs_alpha.png)
